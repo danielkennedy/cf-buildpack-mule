@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+cat << "EOM"
+addons:
+default_process_types:
+  web: MULE_HOME=/home/vcap/app/local/mule-standalone-3.5.0 JAVA_HOME=/home/vcap/app/local/jdk1.7.0_67 PATH=/home/vcap/app/local/jdk1.7.0_67/bin:/home/vcap/app/local/mule-standalone-3.5.0/bin:$PATH mule -M-Dhttp.port=$PORT
+EOM
